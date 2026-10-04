@@ -35,6 +35,31 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
+    // ─── Google Analytics Click Tracking ──────────────────────
+    const trackClick = (id, eventName, platform) => {
+        const el = document.getElementById(id);
+        if (el) {
+            el.addEventListener('click', () => {
+                if (typeof gtag === 'function') {
+                    gtag('event', eventName, {
+                        'event_category': 'App Download',
+                        'event_label': platform,
+                        'value': 1
+                    });
+                }
+            });
+        }
+    };
+
+    trackClick('hero-android-btn', 'download_click', 'Android');
+    trackClick('nav-cta', 'download_click', 'Android');
+    trackClick('guide-cta', 'download_click', 'Android');
+    trackClick('cta-android-btn', 'download_click', 'Android');
+
+    trackClick('hero-ios-btn', 'waitlist_click', 'iOS');
+    trackClick('cta-ios-btn', 'waitlist_click', 'iOS');
+
+
     // ─── FAQ Accordion ────────────────────────────────────────
     document.querySelectorAll('.faq-item').forEach(item => {
         const toggle = () => {
