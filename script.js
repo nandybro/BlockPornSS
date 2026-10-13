@@ -110,6 +110,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     body: JSON.stringify(payload),
                 });
 
+                if (typeof gtag === 'function') {
+                    gtag('event', 'form_submit', {
+                        'event_category': 'Waitlist',
+                        'event_label': 'iOS'
+                    });
+                }
+
                 // Show success regardless of opaque response (CORS-safe)
                 showSuccess();
 
