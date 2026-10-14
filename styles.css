@@ -1032,13 +1032,19 @@ footer {
 .legal-card p:last-child {
   margin-bottom: 0;
 }
-.legal-card ul {
-  list-style: disc;
+.legal-card ul,
+.legal-card ol {
   padding-left: 1.5rem;
   margin-bottom: 1.25rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+}
+.legal-card ul {
+  list-style: disc;
+}
+.legal-card ol {
+  list-style: decimal;
 }
 .legal-card li {
   color: var(--text-secondary);
