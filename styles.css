@@ -1168,3 +1168,134 @@ footer {
   color: #fbbf24;
 }
 
+/* ──────────────────────────────────────────────
+   FEATURED SNIPPET / QUICK ANSWER CALLOUT
+────────────────────────────────────────────── */
+.snippet-box {
+  background: linear-gradient(135deg, rgba(244, 63, 94, 0.08) 0%, rgba(139, 92, 246, 0.08) 100%);
+  border: 1px solid var(--border-red);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  margin: 2.5rem 0;
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+}
+.snippet-box::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 4px; height: 100%;
+  background: linear-gradient(180deg, var(--red-500), var(--violet-500));
+}
+.snippet-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(244, 63, 94, 0.15);
+  border: 1px solid var(--border-red);
+  color: var(--red-500);
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.75rem;
+}
+.snippet-title {
+  font-size: 1.35rem;
+  color: var(--text-primary);
+  margin-bottom: 0.85rem;
+}
+.snippet-summary {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin-bottom: 1rem;
+}
+.snippet-steps {
+  list-style: none;
+  counter-reset: snippet-counter;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 1rem;
+}
+.snippet-steps li {
+  counter-increment: snippet-counter;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+.snippet-steps li strong {
+  color: var(--text-primary);
+}
+.snippet-steps li::before {
+  content: counter(snippet-counter);
+  background: var(--red-500);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 800;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ──────────────────────────────────────────────
+   CLUSTER / HUB GUIDES GRID
+────────────────────────────────────────────── */
+.hub-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+.hub-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1.75rem;
+  transition: all 0.3s var(--ease-out);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+}
+.hub-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-red);
+  box-shadow: 0 12px 30px rgba(244, 63, 94, 0.12);
+}
+.hub-card-title {
+  font-size: 1.15rem;
+  margin-bottom: 0.6rem;
+  color: var(--text-primary);
+}
+.hub-card-desc {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+.hub-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--red-500);
+  font-weight: 600;
+  font-size: 0.88rem;
+  margin-top: auto;
+}
+.hub-card:hover .hub-card-link {
+  color: #ff7043;
+}
+
+
