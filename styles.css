@@ -1078,3 +1078,93 @@ footer {
   .legal-card h2 { font-size: 1.2rem; }
 }
 
+/* ──────────────────────────────────────────────
+   BREADCRUMBS
+────────────────────────────────────────────── */
+.breadcrumb-nav {
+  padding: 1rem 0 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.breadcrumb-nav a {
+  color: var(--text-secondary);
+  transition: color 0.2s;
+}
+.breadcrumb-nav a:hover {
+  color: var(--red-500);
+}
+.breadcrumb-nav span {
+  color: var(--text-muted);
+}
+.breadcrumb-nav .current {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+/* ──────────────────────────────────────────────
+   COMPARISON TABLE
+────────────────────────────────────────────── */
+.comparison-wrap {
+  margin-top: 2.5rem;
+  overflow-x: auto;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-card);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.95rem;
+  min-width: 620px;
+}
+.comparison-table th,
+.comparison-table td {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+.comparison-table th {
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-secondary);
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.comparison-table th.col-highlight {
+  color: var(--red-500);
+  background: rgba(244, 63, 94, 0.08);
+}
+.comparison-table td.col-highlight {
+  background: rgba(244, 63, 94, 0.04);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+.comparison-table tr:last-child td {
+  border-bottom: none;
+}
+.badge-check {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--green-400);
+  font-weight: 600;
+}
+.badge-cross {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-muted);
+}
+.badge-partial {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #fbbf24;
+}
+
