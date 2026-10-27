@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "in.blockporn.blockporn",
+      "sha256_cert_fingerprints": [
+        "44:17:16:25:EA:32:4E:80:34:F4:8E:33:5E:20:A4:BC:53:88:67:8F:88:65:9F:8E:BA:44:32:67:1D:01:E8:9A"
+      ]
+    }
+  }
+]
